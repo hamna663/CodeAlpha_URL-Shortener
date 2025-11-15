@@ -10,7 +10,6 @@ export default function App() {
 
   const backendURL = "http://localhost:4000";
 
-  // Simple URL validator
   const isValidURL = (str) => {
     try {
       new URL(str);
@@ -20,7 +19,6 @@ export default function App() {
     }
   };
 
-  // Create short URL
   const createShortURL = async () => {
     if (!isValidURL(longURL)) {
       setErrorMsg("Enter valid URL!");
@@ -73,7 +71,6 @@ export default function App() {
     }
   };
 
-  // Fetch click history for a short URL
   const fetchClickHistory = async () => {
     if (!shortURL) return;
     setErrorMsg("");
